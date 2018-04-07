@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zc.usefixedheaderscrollview.util.ObservableScrollView
+        android:id="@+id/sv_contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ad29e1"
+                android:gravity="center"
+                android:text="我是头部布局"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_topView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/tab_topView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextAppearance="@style/TabItemText"
+                    app:tabBackground="@null"/>
+                <!--去除TabLayout中Tab点击水波纹效果-->
+                <!--app:tabBackground="@null"-->
+
+                <View
+                    android:id="@+id/line_h"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv"/>
+
+        </LinearLayout>
+
+    </com.zc.usefixedheaderscrollview.util.ObservableScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_fixedView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</RelativeLayout>
